@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:zeta-add-on
+LIBS:zeta-add-on-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -67,4 +68,43 @@ F 3 "" H 5050 3350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5050 3550 5250 3550
+$Comp
+L RaspberryPi RP?
+U 1 1 598A0A15
+P 7700 3700
+F 0 "RP?" H 8100 2850 60  0000 C CNN
+F 1 "RaspberryPi" V 7700 3700 60  0000 C CNN
+F 2 "" H 7700 3700 60  0001 C CNN
+F 3 "" H 7700 3700 60  0001 C CNN
+	1    7700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4250 6650 4250
+Wire Wire Line
+	6650 4250 6650 3850
+Wire Wire Line
+	6650 3850 6350 3850
+Wire Wire Line
+	7000 4150 6750 4150
+Wire Wire Line
+	6750 4150 6750 3650
+Wire Wire Line
+	6750 3650 6350 3650
+Wire Wire Line
+	6350 3750 6850 3750
+Wire Wire Line
+	6850 3750 6850 4050
+Wire Wire Line
+	6850 4050 7000 4050
+Wire Wire Line
+	8400 4250 9000 4250
+Wire Wire Line
+	9000 4250 9000 2750
+Wire Wire Line
+	9000 2750 6550 2750
+Wire Wire Line
+	6550 2750 6550 3550
+Wire Wire Line
+	6550 3550 6350 3550
 $EndSCHEMATC
