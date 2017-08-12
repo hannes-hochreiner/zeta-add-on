@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name zeta-add-on)(type KiCad)(uri "$(KIPRJMOD)/zeta-add-on.pretty")(options "")(descr ""))
+)
