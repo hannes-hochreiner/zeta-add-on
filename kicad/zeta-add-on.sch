@@ -55,19 +55,8 @@ F 3 "" H 5800 4100 60  0001 C CNN
 	1    5800 4100
 	1    0    0    -1  
 $EndComp
-$Comp
-L Antenna AE1
-U 1 1 59875EC0
-P 4800 3350
-F 0 "AE1" H 4725 3425 50  0000 R CNN
-F 1 "Antenna" H 4725 3350 50  0000 R CNN
-F 2 "zeta-add-on:SMA" H 4800 3350 50  0001 C CNN
-F 3 "" H 4800 3350 50  0001 C CNN
-	1    4800 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	4800 3850 5250 3850
+	4650 3850 5250 3850
 $Comp
 L RaspberryPi RP1
 U 1 1 598A0A15
@@ -158,17 +147,6 @@ Connection ~ 1700 5450
 Text Label 1250 5450 2    60   ~ 0
 5V
 $Comp
-L L L1
-U 1 1 598B6011
-P 3250 5450
-F 0 "L1" V 3200 5450 50  0000 C CNN
-F 1 "10µH" V 3325 5450 50  0000 C CNN
-F 2 "zeta-add-on:INDUCTOR" H 3250 5450 50  0001 C CNN
-F 3 "" H 3250 5450 50  0001 C CNN
-	1    3250 5450
-	0    1    1    0   
-$EndComp
-$Comp
 L C C2
 U 1 1 598B604A
 P 3650 5750
@@ -206,8 +184,6 @@ Text Label 4100 5450 0    60   ~ 0
 3V3
 Text Label 8400 3150 0    60   ~ 0
 5V
-Text Label 5250 4150 2    60   ~ 0
-3V3
 $Comp
 L GND #PWR03
 U 1 1 598B626A
@@ -226,18 +202,14 @@ Wire Wire Line
 $Comp
 L R R1
 U 1 1 598CA1E8
-P 6750 3150
-F 0 "R1" V 6830 3150 50  0000 C CNN
-F 1 "0" V 6750 3150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 6680 3150 50  0001 C CNN
-F 3 "" H 6750 3150 50  0001 C CNN
-	1    6750 3150
+P 5400 3150
+F 0 "R1" V 5480 3150 50  0000 C CNN
+F 1 "0" V 5400 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5330 3150 50  0001 C CNN
+F 3 "" H 5400 3150 50  0001 C CNN
+	1    5400 3150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6900 3150 7000 3150
-Text Label 6600 3150 2    60   ~ 0
-3V3
 NoConn ~ 8400 3250
 NoConn ~ 7000 3950
 $Comp
@@ -280,18 +252,16 @@ Text Label 6350 4250 0    60   ~ 0
 GPIO1
 Text Label 6350 4350 0    60   ~ 0
 GPIO2
-Text Label 8400 3850 0    60   ~ 0
-GPIO1
 Text Label 8400 3950 0    60   ~ 0
+GPIO1
+Text Label 8400 3850 0    60   ~ 0
 GPIO2
 NoConn ~ 8400 4350
 Wire Wire Line
 	8400 3750 8700 3750
 Connection ~ 8700 3750
 Wire Wire Line
-	7000 3650 6650 3650
-Wire Wire Line
-	6650 3650 6650 3300
+	6650 3300 6650 3750
 Wire Wire Line
 	6650 3300 4950 3300
 Wire Wire Line
@@ -299,13 +269,9 @@ Wire Wire Line
 Wire Wire Line
 	4950 4250 5250 4250
 Wire Wire Line
-	6550 3750 7000 3750
-Wire Wire Line
-	6550 3400 6550 3750
-Wire Wire Line
 	5050 3400 6550 3400
 Wire Wire Line
-	4800 3850 4800 3550
+	4650 3850 4650 3550
 Wire Wire Line
 	5050 3400 5050 4050
 Wire Wire Line
@@ -411,15 +377,65 @@ Text Label 9800 3800 2    60   ~ 0
 LED3
 Text Label 7000 3450 2    60   ~ 0
 LED1
-Text Label 8400 3650 0    60   ~ 0
+Text Label 7000 3350 2    60   ~ 0
 LED2
-Text Label 8400 4150 0    60   ~ 0
+Text Label 7000 3250 2    60   ~ 0
 LED3
 NoConn ~ 8400 3450
 NoConn ~ 8400 3550
 NoConn ~ 7000 3850
-NoConn ~ 7000 3350
-NoConn ~ 7000 3250
 Wire Wire Line
 	3650 5600 3650 5450
+NoConn ~ 8400 4150
+NoConn ~ 8400 3650
+Wire Wire Line
+	6650 3750 7000 3750
+Wire Wire Line
+	6550 3400 6550 3650
+Wire Wire Line
+	6550 3650 7000 3650
+$Comp
+L Antenna_Shield AE1
+U 1 1 598F3C6E
+P 4650 3350
+F 0 "AE1" H 4575 3525 50  0000 R CNN
+F 1 "Antenna_Shield" H 4575 3450 50  0000 R CNN
+F 2 "zeta-add-on:SMA" H 4650 3450 50  0001 C CNN
+F 3 "" H 4650 3450 50  0001 C CNN
+	1    4650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 598F3D48
+P 4750 3550
+F 0 "#PWR07" H 4750 3300 50  0001 C CNN
+F 1 "GND" H 4750 3400 50  0000 C CNN
+F 2 "" H 4750 3550 50  0001 C CNN
+F 3 "" H 4750 3550 50  0001 C CNN
+	1    4750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3150 7000 3150
+Wire Wire Line
+	5250 3150 5150 3150
+Wire Wire Line
+	5150 2950 5150 4150
+Wire Wire Line
+	5150 4150 5250 4150
+Text Label 5150 2950 2    60   ~ 0
+3V3
+Connection ~ 5150 3150
+$Comp
+L L L1
+U 1 1 598B6011
+P 3250 5450
+F 0 "L1" V 3200 5450 50  0000 C CNN
+F 1 "10µH" V 3325 5450 50  0000 C CNN
+F 2 "zeta-add-on:INDUCTOR" H 3250 5450 50  0001 C CNN
+F 3 "" H 3250 5450 50  0001 C CNN
+	1    3250 5450
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
